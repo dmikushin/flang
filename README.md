@@ -28,7 +28,13 @@ https://join.slack.com/t/flang-compiler/shared_invite/MjExOTEyMzQ3MjIxLTE0OTk4Nz
 
 ## Building Flang
 
-Instructions for building Flang can be found on the Flang wiki:
+The easiest way to build Flang is to use the provided `Dockerfile`:
+
+```
+docker build --build-arg TARGET=arm64 --build-arg LLVM_BRANCH=release_18x -t marcusmae/flang:release_18x --platform linux/arm64 .
+```
+
+Instructions for building Flang from scratch can be found on the Flang wiki:
 
 https://github.com/flang-compiler/flang/wiki/Building-Flang
 
