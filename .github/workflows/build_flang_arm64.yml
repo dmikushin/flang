@@ -14,13 +14,12 @@ on:
 
 jobs:
   build_flang:
-    if: github.repository_owner == 'flang-compiler'
     runs-on: self-hosted
     env:
       build_path: /home/github
       install_prefix: /home/github/usr/local
     container:
-      image: ghcr.io/${{ github.repository_owner}}/ubuntu-flang-${{ matrix.llvm_branch }}:latest
+      image: ghcr.io/flang-compiler/ubuntu-flang-${{ matrix.llvm_branch }}:latest
       credentials:
         username: github
     strategy:
